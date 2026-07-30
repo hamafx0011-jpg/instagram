@@ -1,0 +1,3 @@
+-- Initial migration for the Driving School Management System.
+-- Prisma Migrate will materialize the normalized PostgreSQL schema from prisma/schema.prisma.
+-- Run: npx prisma migrate dev --name init

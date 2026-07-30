@@ -1,0 +1,2 @@
+export function Stat({label,value}:{label:string,value:string|number}){return <div className="card"><p className="text-sm text-slate-500">{label}</p><p className="mt-2 text-3xl font-black">{value}</p></div>}
+export function DataTable({headers,rows}:{headers:string[],rows:(string|number)[][]}){return <div className="card overflow-x-auto"><table className="table"><thead><tr>{headers.map(h=><th key={h}>{h}</th>)}</tr></thead><tbody>{rows.map((r,i)=><tr key={i}>{r.map((c,j)=><td key={j}>{c}</td>)}</tr>)}</tbody></table></div>}

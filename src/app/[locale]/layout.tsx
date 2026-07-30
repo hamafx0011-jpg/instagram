@@ -1,0 +1,1 @@
+import '../globals.css';import {isRtl,locales,defaultLocale} from '@/i18n/config';export default function Layout({children,params}:{children:React.ReactNode,params:{locale:string}}){const locale=locales.includes(params.locale as any)?params.locale:defaultLocale;return <html lang={locale} dir={isRtl(locale)?'rtl':'ltr'}><body>{children}</body></html>}
