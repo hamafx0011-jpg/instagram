@@ -1,0 +1,1 @@
+export const locales=['ku','ar','en'] as const;export type Locale=typeof locales[number];export const defaultLocale:Locale='ku';export const rtlLocales:Locale[]=['ku','ar'];export const isRtl=(l:string)=>rtlLocales.includes(l as Locale);

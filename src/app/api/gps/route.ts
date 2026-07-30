@@ -1,0 +1,2 @@
+import {NextResponse} from 'next/server';import {prisma} from '@/lib/prisma';
+export async function POST(req:Request){const {sessionId,lat,lng,speedKph}=await req.json();const point=await prisma.gpsPoint.create({data:{sessionId,lat,lng,speedKph}});await prisma.auditLog.create({data:{action:'GPS_POINT',entity:'GpsSession',entityId:sessionId,metadata:{precision:'restricted'}}});return NextResponse.json({data:point},{status:201})}
